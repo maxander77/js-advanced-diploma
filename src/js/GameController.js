@@ -1,23 +1,28 @@
-export default class GameController {
-  constructor(gamePlay, stateService) {
-    this.gamePlay = gamePlay;
-    this.stateService = stateService;
-  }
+  import GamePlay  from "./GamePlay"
+  import themes from "./themes";
 
-  init() {
-    // TODO: add event listeners to gamePlay events
-    // TODO: load saved stated from stateService
-  }
+  export default class GameController {
+    constructor(gamePlay, stateService) {
+      this.gamePlay = gamePlay;
+      this.stateService = stateService;
+    }
 
-  onCellClick(index) {
-    // TODO: react to click
-  }
+    init() {
+      // TODO: add event listeners to gamePlay events
+      // TODO: load saved stated from stateService
+      const selectedTheme = themes.prairie;
+      this.gameplay.drawUi(selectedTheme);
+    }
 
-  onCellEnter(index) {
-    // TODO: react to mouse enter
-  }
+    onCellClick(index) {
+      // TODO: react to click
+    }
 
-  onCellLeave(index) {
-    // TODO: react to mouse leave
+    onCellEnter(index) {
+      // TODO: react to mouse enter
+    }
+
+    onCellLeave(index) {
+      // TODO: react to mouse leave
+    }
   }
-}
