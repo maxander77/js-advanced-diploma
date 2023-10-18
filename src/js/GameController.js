@@ -11,7 +11,7 @@
       // TODO: add event listeners to gamePlay events
       // TODO: load saved stated from stateService
       const selectedTheme = themes.prairie;
-      this.gameplay.drawUi(selectedTheme);
+      this.drawUi(selectedTheme);
     }
 
     onCellClick(index) {
