@@ -14,6 +14,9 @@
  */
 export default class Character {
   constructor(level, type = 'generic') {
+    if (constructor.name === 'Character') {
+      throw new Error('Constructor new Character() is unavailable')
+    }
     this.level = level;
     this.attack = 0;
     this.defence = 0;
